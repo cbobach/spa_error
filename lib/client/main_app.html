@@ -1,0 +1,45 @@
+<dom-module id="main-app">
+    <template>
+        <paper-drawer-panel>
+            <paper-header-panel mode="waterfall-tall" drawer>
+
+                <!-- Menu Header -->
+                    <paper-item class="bottom tile">
+                        <iron-icon icon="{{appIcon}}"></iron-icon>
+                        <h1>{{appName}}</h1>
+                    </paper-item>
+
+                <!-- Menu -->
+                <paper-menu id="menu"
+                            selected="{{route}}">
+                    <template is="dom-repeat" items="{{pages}}">
+                        <paper-item on-click="menuItemClicked">
+                                <iron-icon icon="{{item.icon}}"></iron-icon>
+                                <a>{{item.name}}</a>
+                        </paper-item>
+                    </template>
+                </paper-menu>
+            </paper-header-panel>
+
+            <paper-header-panel mode="waterfall-tall" main>
+
+                <!-- Header -->
+                    <paper-icon-button class="bottom tile" icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <paper-item class="title bottom tile">
+                        <h1>{{selectedPage.name}}</h1>
+                    </paper-item>
+
+                <!-- Content -->
+                <neon-animated-pages id="content"
+                                     class="flex"
+                                     selected="{{route}}"
+                                     entry-animation="slide-from-right-animation"
+                                     exit-animation="slide-left-animation">
+                    <template is="dom-repeat" items="{{pages}}">
+                        <neon-animatable>{{item.name}}</neon-animatable>
+                    </template>
+                </neon-animated-pages>
+            </paper-header-panel>
+        </paper-drawer-panel>
+    </template>
+</dom-module>

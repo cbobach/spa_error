@@ -1,0 +1,29 @@
+name: 'spa_error'
+version: 0.1.0
+description: A web app built using polymer.dart.
+author: Christian Bobach <christian.bobach@gmail.com>
+#homepage: https://www.example.com
+
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+
+dependencies:
+  web_components: '>=0.11.3 <0.13.0'
+  route_hierarchical: any
+  reflectable: ^0.3.1
+  sqljocky: any
+  polymer: ^1.0.0-rc.2
+  polymer_interop: ^1.0.0-rc.1
+
+  polymer_elements:
+    git:
+      url: https://github.com/dart-lang/polymer_elements.git
+      ref: update
+
+transformers:
+- web_components:
+    entry_points:
+      - web/index.html
+- reflectable:
+    entry_points:
+      - web/index.dart
