@@ -4,7 +4,7 @@ Reconstruct polymer-dart spa errors in device mode
 See .yaml file for versions, using dart version: 1.13.0-dev.7.2, chromium version: 45.0.2454.101 Ubuntu 15.10
 
 ERROR:
- Already have a Dart type associated with iron-media-query
+interop_support.js:72 Already have a Dart type associated with iron-media-query
 interop_support.js:72 Already have a Dart type associated with iron-selector
 interop_support.js:72 Already have a Dart type associated with paper-drawer-panel
 interop_support.js:72 Already have a Dart type associated with paper-item
